@@ -16,6 +16,7 @@ class MatchOldPassword implements Rule
         //
     }
 
+
     /**
      * Determine if the validation rule passes.
      *
@@ -23,6 +24,7 @@ class MatchOldPassword implements Rule
      * @param  mixed  $value
      * @return bool
      */
+
     public function passes($attribute, $value)
     {
         return Hash::check($value,auth()->user()->password);
