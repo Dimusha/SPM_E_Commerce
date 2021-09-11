@@ -12,6 +12,8 @@ class ProductReview extends Model
         return $this->hasOne('App\User','id','user_id');
     }
 
+    
+
     public static function getAllReview(){
         return ProductReview::with('user_info')->paginate(10);
     }

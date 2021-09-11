@@ -11,6 +11,8 @@ class PostComment extends Model
     public function user_info(){
         return $this->hasOne('App\User','id','user_id');
     }
+
+    
     public static function getAllComments(){
         return PostComment::with('user_info')->paginate(10);
     }
